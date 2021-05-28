@@ -41,6 +41,8 @@ w<-rep(2, length(support))
 lambdas<-exp(seq(3, -10, length.out=200))
 
 #Plots support selection of the 4 methods
+#The SOGL function is very slow and thus the SGL parameter is included in this function
+#If one sets SGL=FALSE the SOGL method will not be run
 plots<-plot_heatmaps(list_group=list_group,list_group_extra=list_group_extra, 
                      support=support, rho=rho, N=N, error_rate_var=error_rate_var, 
                      error_rate_y=error_rate_y, B=5, SGL=TRUE)
